@@ -1,0 +1,51 @@
+body{
+    margin: 3rem;
+}
+$gray : #b9b5b5;
+.text-light{
+    font-weight: 500;
+    color: $gray !important;
+}
+.point {
+    cursor: pointer;
+    i{
+        color: $gray;
+        transition: all .2s ease-out;
+        &:hover {
+            color: darken($gray, 20);
+        }
+    }
+}
+.create {
+    border:2px solid $gray;
+}
+.task{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &-container{
+        margin-left: 1rem;
+        flex-basis: 22rem;
+        padding: .8rem;
+        &-head{
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-item {
+        padding: .4rem;
+        cursor:move;
+        border-left: 2px solid teal;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        &:hover &-right{
+            opacity: 1;
+        }
+        &-right {
+            opacity: 0;
+            transition: all .1s ease;
+        }
+    }
+}
